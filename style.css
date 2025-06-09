@@ -1,22 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
 
+:root {
+    --color-default: #062e7d;
+    --color-second: #0446ca;
+    --color-back: #c2c2c2;
+    --diferente: rgb(27, 132, 87);
+}
+
 * {
     font-family: "Poppins", sans-serif;
     padding: 0px;
     margin: 0px;
 }
 
+body {
+    width: 100%;
+}
+
+/*header -------------------------------------------------------------------------------------------*/
 header {
     display: flex;
     align-items: center;
     justify-content: space-around;
     position: fixed;
     backdrop-filter: blur(200px);
-    background-color: rgba(0, 0, 0, 0);
+    background-color: #062e7d;
     width: 100%;
     height: 80px;
-    background-image: linear-gradient(rgba(0, 0, 0, .3), rgba(0, 0, 0, .3)), linear-gradient(rgba(255, 255, 255, .1), rgba(255, 255, 255, .1));
     z-index: 10;
     color: white;
 }
@@ -46,8 +57,26 @@ header>div>i {
     font-size: 22px;
 }
 
+.button_header {
+    font-family: "Anton", sans-serif;
+    width: 170px;
+    background-color: white;
+    color: var(--color-default);
+    border: none;
+    border-radius: 10px;
+    height: 38px;
+    font-size: 23px;
+    font-weight: 200;
+    letter-spacing: 3px;
+}
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+
+/*inicio -------------------------------------------------------------------------------------------*/
 section {
-    background-image: url(img/pexels-cottonbro-6804071.jpg);
+    background-image: url(img/imgHome\(2\).png);
     background-size: cover;
     background-repeat: no-repeat;
     width: 100%;
@@ -55,6 +84,17 @@ section {
     background-position: center;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    z-index: 1;
+}
+
+section::before {
+    content: "";
+    background-image: linear-gradient();
+    width: 100%;
+    height: 800px;
+    background-position: center;
+    position: absolute;
+    z-index: 2;
 }
 
 section>div {
@@ -64,10 +104,12 @@ section>div {
     text-align: center;
     transform: translate(-50%, -50%);
     color: white;
+    z-index: 3;
 }
 
 .textmain {
     width: 70vw;
+    letter-spacing: 4px;
 }
 
 .textmain>h1 {
@@ -83,16 +125,20 @@ section>div {
 .textmain>button {
     font-family: "Anton", sans-serif;
     width: 200px;
-    background-color: rgb(238, 49, 49);
+    background-color: #062e7d;
     color: white;
     border: none;
     border-radius: 100px;
     height: 55px;
     font-size: 26px;
     font-weight: 500;
-
 }
 
+/*-------------------------------------------------------------------------------------------*/
+
+
+
+/*barra menu lateral -------------------------------------------------------------------------------------------*/
 .naver {
     width: 300px;
     height: 100%;
@@ -134,19 +180,22 @@ section>div {
     padding: 9px;
 }
 
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*sobre -------------------------------------------------------------------------------------------*/
 article {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-wrap: wrap;
     width: 100%;
-    height: 670px;
+    height: auto;
 }
 
 .art-div {
     width: 500px;
     height: 500px;
-
-
 }
 
 .art-div>h1 {
@@ -164,6 +213,13 @@ article {
 
 }
 
+.img_sobre {
+    width: 50vw;
+    min-width: 300px;
+    max-width: 550px;
+    margin: 10px;
+}
+
 .buttons {
     display: flex;
     align-items: center;
@@ -176,7 +232,7 @@ article {
 .button1 {
     font-family: "Anton", sans-serif;
     width: 170px;
-    background-color: rgb(223, 10, 10);
+    background-color: #062e7d;
     color: white;
     border: none;
     border-radius: 100px;
@@ -190,103 +246,238 @@ article {
     width: 170px;
     background-color: white;
     color: black;
-    border: 0.6px solid rgb(248, 76, 76);
+    border: 0.6px solid #062e7d;
     border-radius: 100px;
     height: 55px;
     font-size: 26px;
     font-weight: 500;
 }
 
-.limpando {
-    width: 500px;
-    height: 600px;
+/*-------------------------------------------------------------------------------------------*/
 
+
+
+
+/*serviços -------------------------------------------------------------------------------------------*/
+.Serviços {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    height: auto;
+    margin-bottom: 40px;
 }
 
-.preços {
-    background-color: black;
-    height: 600px;
+.services_title {
+    margin: auto;
+    max-width: 1270px;
+    text-align: left;
+}
+
+.title_services_start {
+    color: rgb(64, 63, 63);
+    font-weight: 600;
+    font-size: 2.3rem;
+    padding: 3px;
+    height: 40px;
+}
+
+.title_services_end {
+    color: var(--color-default);
+    font-weight: 600;
+    font-size: 2.3rem;
+    padding: 3px;
+    height: 40px;
+    margin-bottom: 18px;
+}
+
+.box_service {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin: auto;
+    max-width: 1270px;
+}
+
+.service {
+    background-color: var(--color-default);
+    color: white;
+    border-radius: 12px;
+    flex: 1 1 220px;
+    /* grow, shrink, basis */
+    max-width: 280px;
+    min-width: 200px;
+    height: 200px;
+    padding: 20px;
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.service:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 16px 30px --color-second;
+}
+
+.service h3 {
+    margin: 0 0 15px;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.service p {
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*sobre -------------------------------------------------------------------------------------------*/
+.art_curiosidade {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    font-family: "Anton", sans-serif;
-
-}
-
-.preços>div {
-    height: 260px;
-    width: 260px;
-    padding: 30px;
-    border-radius: 2px;
-}
-
-.preços>div>p {
-    font-size: 13px;
-}
-
-.preços>div>h1 {
-    font-size: 29px;
-}
-
-.preços>div>button {
-    font-family: "Anton", sans-serif;
-    border: 0.5px solid rgb(225, 47, 47);
-    width: 100px;
-    border-radius: 100px;
-    height: 35px;
-    font-size: 14px;
-    font-weight: 500;
-}
-
-.preço1 {
-    background-color: black;
-    color: white;
-}
-
-.preços1>button {
-    background-color: black;
-    color: white;
-}
-
-.preço2 {
-    background-color: rgb(225, 47, 47);
-    color: white;
-}
-
-.preço3 {
-    background-color: white;
-    color: black;
-}
-
-.preço4 {
-    background-color: white;
-    color: black;
-}
-
-footer {
     width: 100%;
-    height: 600px;
-
+    height: auto;
+    background-color: var(--color-default);
 }
 
-.box {
+.curiosidade_box {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.curiosidade_box>h1 {
+    font-size: 4rem;
+    font-weight: 400;
+    font-family: "Anton", sans-serif;
+    margin: 20px;
+    margin-left: 0px;
+}
+
+.curiosidade_box>p {
+    font-weight: 200;
+    font-size: 18px;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+
+
+/*footer -------------------------------------------------------------------------------------------*/
+footer {
     display: flex;
     align-items: center;
-    justify-content: space-around;
-}
-
-footer>h1 {
-    margin: 10px;
-    padding-left: 10px;
+    justify-content: space-between;
+    background-color: white;
+    font-weight: 500;
+    height: 80px;
+    width: 100%;
 }
 
 footer>div {
-    margin: 80px;
+    max-width: 1270px;
+    height: 80px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons_social {
+    gap: 5px;
+}
+
+.icons_social>a {
+    text-decoration: none;
+}
+
+.logo_footer {
+    width: 2.4em;
+    min-width: 60px;
+}
+
+/* .footer_thumb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+} */
+
+.link {
+    font-size: 17px;
+    margin: 5px;
+    font-weight: 200;
+}
+
+.imgicone1,
+.imgicone2,
+.imgicone3 {
+    color: rgb(48, 47, 47);
+    font-size: x-large;
+    padding: 5px;
+}
+
+.imgicone1>i:hover {
+    color: black;
+    transform: translateY(-5px);
+    transition: all ease-in-out 0.4s;
+}
+
+.imgicone2>i:hover {
+    color: #05429e;
+    transform: translateY(-5px);
+    transition: all ease-in-out 0.4s;
+}
+
+.imgicone3>i:hover {
+    color: rgb(236, 14, 51);
+    transform: translateY(-5px);
+    transition: all ease-in-out 0.4s;
+}
+
+
+/* footer {
+    width: 100%;
+    height: 30vh;
 
 }
 
-.box>div>ul>li {
+.title_footer {
+    text-align: center;
+}
+
+.box_footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-height: 300px;
+    margin: 40px;
+}
+
+footer>h1 {
+    margin-top: 10px;
+    padding-left: 10px;
+    color: #062e7d;
+}
+
+.box_footer>div>ul>li {
     list-style: none;
 }
 
@@ -297,15 +488,44 @@ hr {
 }
 
 .title {
-    color: rgb(225, 47, 47);
+    color: #062e7d;
     font-size: 25px;
 }
 
 .link {
     text-align: center;
     margin: 20px;
+    padding-bottom: 10px;
+} */
+
+/* -------------------------------------------------------------------------------------------*/
+
+
+/*botãozap -------------------------------------------------------------------------------------------*/
+
+.button_zap {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: var(--diferente);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
 }
 
+.button_zap>a>i {
+    color: #fff;
+    font-size: 30px;
+}
+
+/*-------------------------------------------------------------------------------------------*/
+
+
+/*Media querys -------------------------------------------------------------------------------------------*/
 @media screen and (max-width:3200px) and (min-width:800px) {
     section>div {
         position: absolute;
@@ -327,14 +547,17 @@ hr {
     .textmain>button {
         margin-top: 10px;
     }
-
-    .limpando {
-        height: 540px;
-    }
 }
 
 
 @media screen and (max-width:1000px) {
+    .img_sobre {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        gap: 70px;
+    }
+
     #iconmenu {
         display: inline;
 
@@ -344,24 +567,23 @@ hr {
         display: none;
     }
 
-    article {
-        display: flex;
-        flex-direction: column-reverse;
-        justify-content: space-around;
-        gap: 70px;
-
-    }
-
     .art-div>h1 {
         font-size: 2rem;
         color: black;
         font-weight: 800;
     }
 
-    .art-div {
+    .curiosidade_box>h1 {
+        font-size: 2rem;
+        color: rgb(255, 255, 255);
+        font-weight: 800;
+        letter-spacing: 5px;
+    }
 
+    .art-div,
+    .curiosidade_box {
+        height: 420px;
         text-align: center;
-
     }
 
     section>div {
@@ -371,5 +593,16 @@ hr {
         text-align: center;
         transform: translate(-50%, -50%);
         color: white;
+    }
+
+    .services_title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 100%;
+        max-width: 100%;
     }
 }

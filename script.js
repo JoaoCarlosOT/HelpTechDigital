@@ -1,16 +1,29 @@
-function Abrirnaver(){
-    var nav = document.querySelector(".naver");
-
-    nav.style.left="0px";
-    nav.style.transition="0.9s";
+var menuAberto = false;
+function AbrirEFecharMenu() { 
+    var naverElement = window.document.querySelector('.naver');
+    if (menuAberto) {
+        naverElement.style.left = "-100%";
+        naverElement.style.transition = ".2s";
+        menuAberto = false;
+    } else {
+        naverElement.style.left = "0";
+        naverElement.style.transition = ".2s";
+        menuAberto = true;
+    }
 }
 
-function Fecharnaver(){
-    var nav = document.querySelector(".naver");
+// window.addEventListener('scroll', function() {
+//     var button = document.getElementById('butao-main');
+//     var scrollPosition = window.scrollY;
 
-    nav.style.left="-100%";
-    nav.style.transition="0.9s";
-}
+//     if (scrollPosition > 200) {
+//         button.style.visibility = "visible";
+//         button.style.transition = ".4s";
+//     } else {
+//         button.style.visibility = "hidden";
+//         button.style.transition = ".4s";
+//     }
+// });
 
-addEventListener("click",Abrirnaver);
-addEventListener("click",Fecharnaver);
+
+
