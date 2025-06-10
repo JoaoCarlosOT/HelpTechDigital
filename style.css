@@ -6,6 +6,8 @@
     --color-second: #0446ca;
     --color-back: #c2c2c2;
     --diferente: rgb(27, 132, 87);
+    --min-font-size: 18px;
+    --max-font-size: 24px;
 }
 
 * {
@@ -150,29 +152,44 @@ section>div {
     left: -100%;
 }
 
+.logo_naver {
+    width: 7em;
+    min-width: 60px;
+}
+
 .naver>div {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    width: 100%;
 }
 
-.naver>div>h1 {
-    padding: 10px;
+.naver>nav {
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 200px;
+    margin: auto;
 }
 
-.naver>ul>li {
-    list-style: none;
-    color: white;
-
-}
-
-.naver>ul>li>a {
+.naver>nav>a {
     text-decoration: none;
     color: white;
-    padding: 30px;
+    padding: 20px;
     font-size: 20px;
+}
 
+.naver>nav>a:hover {
+    color: black;
+    background-color: #fff;
+    transition: 0.5s ease-in-out;
+}
 
+#icon_links_naver {
+    font-size: 20px;
+    margin-right: 8px;
 }
 
 #closeicon {
@@ -209,8 +226,10 @@ article {
 
 .art-div>p {
     font-weight: 200;
-    font-size: 18px;
-
+    font-size: clamp(var(--min-font-size), 4vw, var(--max-font-size));
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0px 10px;
 }
 
 .img_sobre {
@@ -239,6 +258,10 @@ article {
     height: 55px;
     font-size: 26px;
     font-weight: 500;
+}
+
+.button1>a {
+    color: #fff;
 }
 
 .button2 {
@@ -325,6 +348,7 @@ article {
     margin: 0 0 15px;
     font-weight: 700;
     font-size: 1.5rem;
+    text-align: center;
 }
 
 .service p {
@@ -367,7 +391,10 @@ article {
 
 .curiosidade_box>p {
     font-weight: 200;
-    font-size: 18px;
+    font-size: clamp(var(--min-font-size), 4vw, 20px);
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 0px 15px;
 }
 
 /*-------------------------------------------------------------------------------------------*/
