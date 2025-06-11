@@ -58,7 +58,7 @@ header>div>i {
 
 #iconmenu {
     display: none;
-    font-size: 22px;
+    font-size: clamp(26px, 4vw, 32px);
 }
 
 #carticon {
@@ -210,12 +210,13 @@ section {
 }
 
 .art-div>h1 {
-    font-size: 4rem;
-    color: black;
+    font-size: clamp(22px, 4vw, 42px);
+    color: var(--color-default);
     font-weight: 400;
     font-family: "Anton", sans-serif;
     margin-top: 20px;
     margin-left: 0px;
+    padding-left: 12px;
 }
 
 .art-div>p {
@@ -229,7 +230,7 @@ section {
 
 .img_sobre {
     width: 40vw;
-    min-width: 300px;
+    min-width: 280px;
     max-width: 500px;
     margin: 10px;
 }
@@ -287,6 +288,7 @@ section {
     margin: auto;
     max-width: 1270px;
     text-align: left;
+    padding-left: 15px;
 }
 
 .title_services_start {
@@ -325,16 +327,15 @@ section {
     min-width: 200px;
     height: 200px;
     padding: 20px;
-    transition: transform 0.3s ease;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    transition: 0.3s ease-in-out;
 }
 
 .service:hover {
     transform: translateY(-10px);
-    box-shadow: 0 16px 30px --color-second;
 }
 
 .service h3 {
@@ -353,32 +354,33 @@ section {
 /*-------------------------------------------------------------------------------------------*/
 
 
-/*sobre -------------------------------------------------------------------------------------------*/
+/*curiosidades -------------------------------------------------------------------------------------------*/
 .art_curiosidade {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
-    height: auto;
+    height: 100%;
     background-color: var(--color-default);
+    padding: 30px 0px;
 }
 
 .curiosidade_box {
     width: 500px;
-    height: 500px;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
     color: white;
 }
 
 .curiosidade_box>h1 {
-    font-size: 4rem;
+    font-size: clamp(22px, 4vw, 38px);
     font-weight: 400;
     font-family: "Anton", sans-serif;
     margin-top: 20px;
+    text-align: left;
+    padding-left: 15px;
 }
 
 .curiosidade_box>p {
@@ -392,7 +394,77 @@ section {
 
 /*-------------------------------------------------------------------------------------------*/
 
+/*carrossel -------------------------------------------------------------------------------------------*/
+/* Cor padrão das bolinhas */
+.owl-theme .owl-dots .owl-dot span {
+    background: #b9b7b7;
+    /* cor das bolinhas inativas */
+    width: 12px;
+    height: 12px;
+    margin: 5px;
+    display: block !important;
+    border-radius: 50%;
+    transition: background 0.3s;
+}
 
+/* Cor da bolinha ativa (indicando o slide atual) */
+.owl-theme .owl-dots .owl-dot.active span {
+    background: var(--color-second);
+    /* por exemplo, azul */
+}
+
+#carrossel_div {
+    padding: 40px 0px;
+}
+
+.car-card {
+    background: #fff;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 80%;
+    max-width: 400px;
+}
+
+.box_avaliacao {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.avaliacao_star {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.avaliacao_star>i {
+    color: #FFDB57;
+}
+
+.car-card img {
+    max-width: 10%;
+    border-radius: 50%;
+}
+
+.car-card h3 {
+    margin-top: 15px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.car-card p {
+    color: black;
+    font-size: 0.95em;
+}
+
+/* -------------------------------------------------------------------------------------------*/
 
 
 /*footer -------------------------------------------------------------------------------------------*/
@@ -447,7 +519,7 @@ footer>div {
 .imgicone1,
 .imgicone2,
 .imgicone3 {
-    color: rgb(48, 47, 47);
+    color: black;
     font-size: x-large;
     padding: 5px;
 }
@@ -537,6 +609,11 @@ hr {
     right: 20px;
 }
 
+.button_zap:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
 .button_zap>a>i {
     color: #fff;
     font-size: 30px;
@@ -565,17 +642,11 @@ hr {
         display: none;
     }
 
-    .art-div>h1 {
-        font-size: 2rem;
-        color: black;
-        font-weight: 800;
-    }
-
     .curiosidade_box>h1 {
-        font-size: 2rem;
         color: rgb(255, 255, 255);
         font-weight: 800;
         letter-spacing: 5px;
+        text-align: center;
     }
 
     .art-div,
@@ -598,5 +669,13 @@ hr {
     .card {
         flex: 1 1 100%;
         max-width: 100%;
+    }
+
+    .art_curiosidade {
+        height: 960px;
+    }
+
+    #Serviços {
+        margin-top: 110px;
     }
 }
