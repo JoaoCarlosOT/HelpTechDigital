@@ -6,6 +6,8 @@
     --color-second: #0446ca;
     --color-back: #c2c2c2;
     --diferente: rgb(27, 132, 87);
+
+
     --min-font-size: 18px;
     --max-font-size: 24px;
 }
@@ -14,6 +16,10 @@
     font-family: "Poppins", sans-serif;
     padding: 0px;
     margin: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -78,50 +84,36 @@ header>div>i {
 
 /*inicio -------------------------------------------------------------------------------------------*/
 section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-image: url(img/imgHome\(2\).png);
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     width: 100%;
     height: 800px;
-    background-position: center;
-    position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
-    z-index: 1;
-}
-
-section::before {
-    content: "";
-    background-image: linear-gradient();
-    width: 100%;
-    height: 800px;
-    background-position: center;
-    position: absolute;
-    z-index: 2;
-}
-
-section>div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center;
-    transform: translate(-50%, -50%);
-    color: white;
-    z-index: 3;
+    position: relative;
 }
 
 .textmain {
     width: 70vw;
     letter-spacing: 4px;
+    text-align: right;
+    color: white;
 }
 
 .textmain>h1 {
-    font-size: 50px;
+    font-size: clamp(40px, 6vw, 90px);
     font-family: "Anton", sans-serif;
 }
 
 .textmain>p {
-    font-size: 25px;
     padding: 15px;
+    font-size: clamp(18px, 4vw, 25px);
+    font-weight: 400;
 }
 
 .textmain>button {
@@ -170,15 +162,16 @@ section>div {
     flex-direction: column;
     align-items: left;
     justify-content: center;
-    width: 200px;
-    margin: auto;
+    width: 100%;
 }
 
 .naver>nav>a {
     text-decoration: none;
     color: white;
     padding: 20px;
+    border-radius: 20px 0px 0px 20px;
     font-size: 20px;
+    margin-left: 40px;
 }
 
 .naver>nav>a:hover {
@@ -201,13 +194,14 @@ section>div {
 
 
 /*sobre -------------------------------------------------------------------------------------------*/
-article {
+#sobre_site {
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     height: auto;
+    margin-bottom: 40px;
 }
 
 .art-div {
@@ -220,7 +214,7 @@ article {
     color: black;
     font-weight: 400;
     font-family: "Anton", sans-serif;
-    margin: 20px;
+    margin-top: 20px;
     margin-left: 0px;
 }
 
@@ -230,12 +224,13 @@ article {
     max-width: 800px;
     margin: 0 auto;
     padding: 0px 10px;
+    text-align: justify;
 }
 
 .img_sobre {
-    width: 50vw;
+    width: 40vw;
     min-width: 300px;
-    max-width: 550px;
+    max-width: 500px;
     margin: 10px;
 }
 
@@ -244,24 +239,22 @@ article {
     align-items: center;
     justify-content: center;
     gap: 50px;
-    margin: 30px;
-
+    margin-top: 10px;
 }
 
 .button1 {
     font-family: "Anton", sans-serif;
     width: 170px;
     background-color: #062e7d;
-    color: white;
     border: none;
     border-radius: 100px;
     height: 55px;
-    font-size: 26px;
-    font-weight: 500;
 }
 
 .button1>a {
     color: #fff;
+    font-size: clamp(18px, 4vw, 25px);
+    font-weight: 500;
 }
 
 .button2 {
@@ -272,7 +265,7 @@ article {
     border: 0.6px solid #062e7d;
     border-radius: 100px;
     height: 55px;
-    font-size: 26px;
+    font-size: clamp(18px, 4vw, 25px);
     font-weight: 500;
 }
 
@@ -282,7 +275,7 @@ article {
 
 
 /*serviços -------------------------------------------------------------------------------------------*/
-.Serviços {
+#Serviços {
     width: 100%;
     padding: 20px;
     box-sizing: border-box;
@@ -299,18 +292,18 @@ article {
 .title_services_start {
     color: rgb(64, 63, 63);
     font-weight: 600;
-    font-size: 2.3rem;
     padding: 3px;
     height: 40px;
+    font-size: clamp(20px, 4vw, 35px);
 }
 
 .title_services_end {
     color: var(--color-default);
     font-weight: 600;
-    font-size: 2.3rem;
     padding: 3px;
     height: 40px;
     margin-bottom: 18px;
+    font-size: clamp(20px, 4vw, 35px);
 }
 
 .box_service {
@@ -385,8 +378,7 @@ article {
     font-size: 4rem;
     font-weight: 400;
     font-family: "Anton", sans-serif;
-    margin: 20px;
-    margin-left: 0px;
+    margin-top: 20px;
 }
 
 .curiosidade_box>p {
@@ -395,6 +387,7 @@ article {
     max-width: 700px;
     margin: 0 auto;
     padding: 0px 15px;
+    text-align: justify;
 }
 
 /*-------------------------------------------------------------------------------------------*/
@@ -460,7 +453,7 @@ footer>div {
 }
 
 .imgicone1>i:hover {
-    color: black;
+    color: rgb(89, 18, 18);
     transform: translateY(-5px);
     transition: all ease-in-out 0.4s;
 }
@@ -553,28 +546,6 @@ hr {
 
 
 /*Media querys -------------------------------------------------------------------------------------------*/
-@media screen and (max-width:3200px) and (min-width:800px) {
-    section>div {
-        position: absolute;
-        top: 50%;
-        right: 0px;
-        text-align: end;
-        color: white;
-    }
-
-    .textmain>h1 {
-        font-size: 6rem;
-        font-family: "Anton", sans-serif;
-    }
-
-    .textmain>p {
-        font-size: 25px;
-    }
-
-    .textmain>button {
-        margin-top: 10px;
-    }
-}
 
 
 @media screen and (max-width:1000px) {
@@ -611,15 +582,11 @@ hr {
     .curiosidade_box {
         height: 420px;
         text-align: center;
+        width: 80%
     }
 
-    section>div {
-        position: absolute;
-        top: 50%;
-        left: 50%;
+    .textmain {
         text-align: center;
-        transform: translate(-50%, -50%);
-        color: white;
     }
 
     .services_title {

@@ -24,30 +24,26 @@
 <body>
     <header>
         <h1><img src="img/logo_light.png" alt="" data-aos="fade-left"></h1>
-        <nav>
-            <a href="">Início</a>
-            <a href="">Sobre</a>
-            <a href="">Serviços</a>
-            <a href="">Contatos</a>
+        <nav data-aos="fade-left">
+            <a href="#inicio_site">Início</a>
+            <a href="#sobre_site">Sobre</a>
+            <a href="#Serviços">Serviços</a>
+            <a href="#endpage">Contatos</a>
         </nav>
-        <!-- <div> -->
-        <!-- <i class="fa-solid fa-cart-shopping" id="carticon"></i> -->
-        <!-- <button class="button_header">Orçamento</button> -->
         <i class="fa-solid fa-bars" id="iconmenu" onclick="AbrirEFecharMenu()"></i>
-        <!-- </div> -->
     </header>
 
-    <section>
-        <div class="textmain">
+    <section id="inicio_site">
+        <div class="textmain" data-aos="fade-left">
             <h1>Soluções digitais acessíveis para todos</h1>
-            <p>Car Was is a brand which is literally </p>
+            <p>Soluções digitais rápidas e personalizadas para o que você realmente precisa.</p>
             <button>Fale com a gente</button>
         </div>
     </section>
 
-    <article>
-        <img src="img/Sobre.png" alt="" class="img_sobre">
-        <div class="art-div">
+    <article id="sobre_site">
+        <img src="img/Sobre.png" alt="" class="img_sobre" data-aos="fade-up">
+        <div class="art-div" data-aos="fade-up">
             <h1>Quem somos?</h1>
             <p>Somos a Help Tech Digital, uma empresa jovem e inovadora que oferece serviços profissionais de design,
                 suporte técnico, consultoria para compra de equipamentos e ajuda com o Pacote Office. Aqui, você
@@ -61,28 +57,28 @@
         </div>
     </article>
 
-    <div class="Serviços">
-        <div class="services_title">
+    <div id="Serviços">
+        <div class="services_title" data-aos="fade-up">
             <h1 class="title_services_start">Serviços que oferecemos para</h1>
             <h1 class="title_services_end">elevar o seu negócio:</h1>
         </div>
         <div class="box_service">
-            <div class="service">
+            <div class="service" data-aos="fade-up">
                 <h3>Suporte e Manutenção</h3>
                 <p>Soluções rápidas para problemas no seu computador ou notebook.</p>
             </div>
 
-            <div class="service">
+            <div class="service" data-aos="fade-up">
                 <h3>Designer gráfico</h3>
                 <p>Criação de artes personalizadas para redes sociais, logos e banners.</p>
             </div>
 
-            <div class="service">
+            <div class="service" data-aos="fade-up">
                 <h3>Edição de Imagem e Vídeo</h3>
                 <p>Transforme suas fotos e vídeos em conteúdos profissionais..</p>
             </div>
 
-            <div class="service">
+            <div class="service" data-aos="fade-up">
                 <h3>Pacote Office e Produtividade</h3>
                 <p>Auxílio com Word, Excel, PowerPoint e Google Docs.</p>
             </div>
@@ -90,7 +86,7 @@
     </div>
 
     <article class="art_curiosidade">
-        <div class="curiosidade_box">
+        <div class="curiosidade_box" data-aos="fade-up">
             <h1>Você sabia que...</h1>
             <p>Mais de 40% dos pequenos negócios no Brasil perdem clientes por não terem presença online profissional.
                 Ter só redes sociais já não basta — o público quer confiança e clareza.
@@ -100,10 +96,10 @@
 
                 Presença digital não é luxo — é essencial. A gente te ajuda com isso!</p>
         </div>
-        <img src="img/img_curiosidades.png" alt="" class="img_sobre">
+        <img src="img/img_curiosidades.png" alt="" class="img_sobre" data-aos="fade-up">
     </article>
 
-    <footer>
+    <footer id="endpage">
         <div>
             <!-- <h1 class="footer_thumb"> -->
             <img src="img/logo_dark.png" alt="" class="logo_footer">
@@ -111,11 +107,11 @@
             <!-- </h1> -->
             <nav class="icons_social">
                 <a href="" class="imgicone1" target="_blank">
-                    <i class="fab fa-github"></i>
+                    <i class="fa-solid fa-envelope"></i>
                 </a>
-                <a href="" class="imgicone2" target="_blank">
+                <!-- <a href="" class="imgicone2" target="_blank">
                     <i class="fab fa-linkedin"></i>
-                </a>
+                </a> -->
                 <a href="" class="imgicone3" target="_blank">
                     <i class="fab fa-instagram"></i>
                 </a>
@@ -171,10 +167,10 @@
             <i class="fa-solid fa-xmark" id="closeicon" onclick="AbrirEFecharMenu()"></i>
         </div>
         <nav>
-            <a href=""><i class="fa-solid fa-magnifying-glass" id="icon_links_naver"></i>Início</a>
-            <a href=""><i class="fa-solid fa-magnifying-glass" id="icon_links_naver"></i>Sobre</a>
-            <a href=""><i class="fa-solid fa-magnifying-glass" id="icon_links_naver"></i>Serviços</a>
-            <a href=""><i class="fa-solid fa-magnifying-glass" id="icon_links_naver"></i>Contatos</a>
+            <a href="#inicio_site"><i class="fa-solid fa-magnifying-glass" id="icon_links_naver"></i>Início</a>
+            <a href="#sobre_site"><i class="fa-solid fa-magnifying-glass" id="icon_links_naver"></i>Sobre</a>
+            <a href="#Serviços"><i class="fa-solid fa-magnifying-glass" id="icon_links_naver"></i>Serviços</a>
+            <a href="#endpage"><i class="fa-solid fa-magnifying-glass" id="icon_links_naver"></i>Contatos</a>
         </nav>
     </div>
 
