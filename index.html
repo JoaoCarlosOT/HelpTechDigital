@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HelpTech Digital</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -23,10 +23,10 @@
 
 
     <!-- Open Graph (Facebook, LinkedIn, etc.) -->
-    <meta property="og:title" content="Empresa tecnologia" />
+    <meta property="og:title" content="Empresa de Tecnologia" />
     <meta property="og:description" content="Manutenção e suporte, designer, edição de vídeo e imagem e muito mais." />
-    <meta property="og:image" content="img/logo_light.png" />
-    <meta property="og:url" content="" />
+    <meta property="og:image" content="https://help-tech-digital.vercel.app/img/logo_light.png" />
+    <meta property="og:url" content="https://help-tech-digital.vercel.app/" />
     <meta property="og:type" content="website" />
 
     <link rel="stylesheet" href="style.css">
@@ -49,7 +49,9 @@
         <div class="textmain" data-aos="fade-left">
             <h1>Soluções digitais acessíveis para todos</h1>
             <p>Soluções digitais rápidas e personalizadas para o que você realmente precisa.</p>
-            <button>Fale com a gente</button>
+            <a href="https://www.instagram.com/helptech_digital?igsh=MXZmbm8yajhwYnd5Nw==" target="_blank"
+                class="button3">Fale com a
+                gente</a>
         </div>
     </section>
 
@@ -61,10 +63,10 @@
                 suporte técnico, consultoria para compra de equipamentos e ajuda com o Pacote Office. Aqui, você
                 encontra qualidade, preço justo e atendimento personalizado, tudo isso de forma 100% online!</p>
             <div class="buttons">
-                <button class="button1">
-                    <a href="utils/Lista de serviços HelpTech.pdf" download="Catálogo_HelpTech">Catálogo</a>
-                </button>
-                <button class="button2">Serviços</button>
+                <a href="utils/Lista de serviços HelpTech.pdf" download="Catálogo_HelpTech" class="button1">Catálogo</a>
+
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSf816B42PswyWWREkcHyFe2WNelG60jNVMvYcR-znRUwTr4Kw/viewform?usp=sharing&ouid=117015597057733469136"
+                    target="_blank" class="button2">Serviços</a>
             </div>
         </div>
     </article>
@@ -76,21 +78,25 @@
         </div>
         <div class="box_service">
             <div class="service" data-aos="fade-up">
+                <img src="img/suporte.jpg" alt="">
                 <h3>Suporte e Manutenção</h3>
                 <p>Soluções rápidas para problemas no seu computador ou notebook.</p>
             </div>
 
             <div class="service" data-aos="fade-up">
+                <img src="img/designer.jpg" alt="">
                 <h3>Designer gráfico</h3>
                 <p>Criação de artes personalizadas para redes sociais, logos e banners.</p>
             </div>
 
             <div class="service" data-aos="fade-up">
+                <img src="img/edição.jpg" alt="">
                 <h3>Edição de Imagem e Vídeo</h3>
-                <p>Transforme suas fotos e vídeos em conteúdos profissionais..</p>
+                <p>Transforme suas fotos e vídeos em conteúdos profissionais .</p>
             </div>
 
             <div class="service" data-aos="fade-up">
+                <img src="img/office.jpeg" alt="">
                 <h3>Pacote Office e Produtividade</h3>
                 <p>Auxílio com Word, Excel, PowerPoint e Google Docs.</p>
             </div>
@@ -127,7 +133,7 @@
         </div>
         <div class="car-card">
             <div class="box_avaliacao">
-                <img src="img/Captura de tela 2025-06-11 153038.png" alt="Carro 1">
+                <img src="img/Captura de tela 2025-06-11 170137.png" alt="Carro 1">
                 <div class="avaliacao_star">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -140,7 +146,7 @@
         </div>
         <div class="car-card">
             <div class="box_avaliacao">
-                <img src="img/Captura de tela 2025-06-11 153106.png" alt="Carro 1">
+                <img src="img/Captura de tela 2025-06-11 170201.png" alt="Carro 1">
                 <div class="avaliacao_star">
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
@@ -184,7 +190,7 @@
         <div>
             <!-- <h1 class="footer_thumb"> -->
             <img src="img/logo_dark.png" alt="" class="logo_footer">
-            <p class="link">2025 HelpTech</p>
+            <p class="link">© 2025 HelpTech Digital. Todos os direitos reservados.</p>
             <!-- </h1> -->
             <nav class="icons_social">
                 <a href="" class="imgicone1" target="_blank">
@@ -248,10 +254,14 @@
             <i class="fa-solid fa-xmark" id="closeicon" onclick="AbrirEFecharMenu()"></i>
         </div>
         <nav>
-            <a href="#inicio_site"><i class="fa-solid fa-house" id="icon_links_naver"></i>Início</a>
-            <a href="#sobre_site"><i class="fa-solid fa-user" id="icon_links_naver"></i>Sobre</a>
-            <a href="#Serviços"><i class="fa-solid fa-cogs" id="icon_links_naver"></i>Serviços</a>
-            <a href="#endpage"><i class="fa-solid fa-phone-alt" id="icon_links_naver"></i>Contatos</a>
+            <a href="#inicio_site" onclick="AbrirEFecharMenu()"><i class="fa-solid fa-house"
+                    id="icon_links_naver"></i>Início</a>
+            <a href="#sobre_site" onclick="AbrirEFecharMenu()"><i class="fa-solid fa-user"
+                    id="icon_links_naver"></i>Sobre</a>
+            <a href="#Serviços" onclick="AbrirEFecharMenu()"><i class="fa-solid fa-cogs"
+                    id="icon_links_naver"></i>Serviços</a>
+            <a href="#endpage" onclick="AbrirEFecharMenu()"><i class="fa-solid fa-phone-alt"
+                    id="icon_links_naver"></i>Contatos</a>
         </nav>
     </div>
 
